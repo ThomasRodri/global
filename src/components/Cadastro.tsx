@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Leaf, Eye, EyeOff } from 'lucide-react'
 
-export default function SignupPage() {
+export default function Cadastro() {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
 
