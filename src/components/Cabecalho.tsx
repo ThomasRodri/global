@@ -14,7 +14,7 @@ export default function Header() {
 
         <nav className="flex space-x-6">
           <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
-          <Link href="/integrantes" className="hover:text-green-400 transition-colors">Integrantes</Link>
+          <Link href="/Integrantes" className="hover:text-green-400 transition-colors">Integrantes</Link>
           <Link href="/Login" className="hover:text-green-400 transition-colors">Login</Link>
         </nav>
       </div>
