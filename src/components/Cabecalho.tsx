@@ -1,6 +1,7 @@
 'use client'
 
 import { Leaf } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -12,10 +13,9 @@ export default function Header() {
         </div>
 
         <nav className="flex space-x-6">
-          <a href="#" className="hover:text-green-400 transition-colors">Home</a>
-          <a href="#" className="hover:text-green-400 transition-colors">About</a>
-          <a href="#" className="hover:text-green-400 transition-colors">Services</a>
-          <a href="#" className="hover:text-green-400 transition-colors">Contact</a>
+          <Link href="/" className="hover:text-green-400 transition-colors">Home</Link>
+          <Link href="/Integrantes" className="hover:text-green-400 transition-colors">Integrantes</Link>
+          <Link href="/Login" className="hover:text-green-400 transition-colors">Login</Link>
         </nav>
       </div>
     </header>
