@@ -8,7 +8,10 @@ import FetchProjects from '../Projetos/fetchProjects';
 import Update from '../Projetos/update';
 import UpdateProject from '../Projetos/updateProject';
 
+
+
 const ProjetosPage = () => {
+  
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Página de Projetos</h1>
