@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Leaf, Eye, EyeOff } from 'lucide-react'
+import Link from 'next/link'
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
@@ -52,9 +53,9 @@ export default function LoginPage() {
         </form>
         <p className="mt-2 text-center text-sm text-gray-400">
           Não tem uma conta?{' '}
-          <a href="#" className="font-medium text-green-400 hover:text-green-300">
+          <Link href="/CadastroPa" className="font-medium text-green-400 hover:text-green-300">
             Registre-se
-          </a>
+          </Link>
         </p>
       </div>
     </div>
