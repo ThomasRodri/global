@@ -15,7 +15,8 @@ export default function Rodape() {
             <ul className="space-y-2">
               <li><Link href="/" className="hover:text-green-400 transition-colors">Home</Link></li>
               <li><Link href="/Integrantes" className="hover:text-green-400 transition-colors">Integrantes</Link></li>
-              <li><Link href="/Login" className="hover:text-green-400 transition-colors">Login</Link></li>
+              <li><Link href="/ProjetosPage" className="hover:text-green-400 transition-colors">Projetos</Link></li>
+              <li><Link href="/BotPage" className="hover:text-green-400 transition-colors">Bot</Link></li>
               
             </ul>
           </div>
