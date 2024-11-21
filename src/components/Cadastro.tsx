@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link' // Import do Link para navegação
 import { Leaf, Eye, EyeOff } from 'lucide-react'
 
 export default function Cadastro() {
@@ -77,9 +78,9 @@ export default function Cadastro() {
         </form>
         <p className="mt-2 text-center text-sm text-gray-400">
           Já tem uma conta?{' '}
-          <a href="#" className="font-medium text-green-400 hover:text-green-300">
+          <Link href="/Login" className="font-medium text-green-400 hover:text-green-300">
             Faça login
-          </a>
+          </Link>
         </p>
       </div>
     </div>
