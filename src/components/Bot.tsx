@@ -20,10 +20,10 @@ const Bot = () => {
     const lowerInput = input.toLowerCase();
 
     const responses = {
-      solar: "A energia solar é obtida através da conversão da luz do sol em eletricidade. Ideal para reduzir o uso de combustíveis fósseis.",
-      eolica: "A energia eólica utiliza turbinas para transformar a força do vento em eletricidade. É uma alternativa sustentável e eficiente.",
-      biomassa: "Biomassa é uma fonte de energia renovável que utiliza resíduos orgânicos para gerar energia, reduzindo desperdícios.",
-      hidreletrica: "A energia hidrelétrica é gerada pelo movimento da água em grandes represas, oferecendo energia em grande escala.",
+      solar: "A energia solar é obtida através da conversão da luz do sol em eletricidade. Painéis solares captam a radiação solar e a transformam em energia. É ideal para reduzir o uso de combustíveis fósseis e pode ser usada tanto em residências quanto em grandes usinas solares. Gostaria de saber sobre mais alguma energia renovável?",
+      eolica: "A energia eólica utiliza turbinas para transformar a força do vento em eletricidade. Turbinas eólicas são instaladas em locais com grande incidência de ventos constantes, como litorais ou áreas planas. É uma alternativa sustentável, limpa e eficiente. Gostaria de saber sobre mais alguma energia renovável?",
+      biomassa: "A biomassa é uma fonte de energia renovável que utiliza resíduos orgânicos, como restos de alimentos, madeira e resíduos agrícolas, para gerar energia. Esse processo ajuda a reduzir o desperdício e promove a reutilização de recursos naturais. Além disso, é uma excelente forma de reduzir emissões de gases de efeito estufa. Gostaria de saber sobre mais alguma energia renovável?",
+      hidreletrica: "A energia hidrelétrica é gerada pelo movimento da água em grandes represas, que acionam turbinas e produzem eletricidade. É uma das fontes mais utilizadas no mundo, oferecendo energia em grande escala. No entanto, exige cuidados ambientais para evitar impactos negativos em ecossistemas. Gostaria de saber sobre mais alguma energia renovável?",
     };
 
     const response = Object.keys(responses).find((key) => lowerInput.includes(key))
