@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -15,32 +14,23 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [newProject, setNewProject] = useState({ name: '', description: '' });
 
-  // Fetch projects from backend API
   useEffect(() => {
-    console.log('Fetching projects from:', `${api_base_url}/api/projetos`);
     fetch(`${api_base_url}/api/projetos`)
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to fetch projects: ${res.status} ${res.statusText}`);
-        console.log('Projects fetched successfully:', res);
         return res.json();
       })
-      .then((data: Project[]) => {
-        console.log('Projects data:', data);
-        setProjects(data);
-      })
+      .then((data: Project[]) => setProjects(data))
       .catch((error) => console.error('Error fetching projects:', error.message));
   }, []);
 
-  // Handle input changes
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setNewProject((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Submit new project to backend
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitting new project:', newProject);
     if (newProject.name && newProject.description) {
       fetch(`${api_base_url}/api/projetos`, {
         method: 'POST',
@@ -49,11 +39,9 @@ export default function Projects() {
       })
         .then((res) => {
           if (!res.ok) throw new Error(`Failed to add project: ${res.status} ${res.statusText}`);
-          console.log('Project added successfully:', res);
           return res.json();
         })
         .then((data: Project) => {
-          console.log('Added project data:', data);
           setProjects((prev) => [...prev, data]); // Add the new project to the state
           setNewProject({ name: '', description: '' });
         })
@@ -64,15 +52,12 @@ export default function Projects() {
     }
   };
 
-  // Delete project in backend
   const deleteProject = (id: number) => {
-    console.log('Deleting project with ID:', id);
     fetch(`${api_base_url}/api/projetos/${id}`, {
       method: 'DELETE',
     })
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to delete project: ${res.status} ${res.statusText}`);
-        console.log('Project deleted successfully:', res);
         setProjects((prev) => prev.filter((project) => project.id !== id));
       })
       .catch((error) => console.error('Error deleting project:', error.message));
